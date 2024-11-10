@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding: 20px;
+}
+
+.contact {
+  position: absolute;
+  top: -4px; /* Điều chỉnh lại vị trí văn bản */
+  right: 19px;
+  font-size: 14px; /* Chỉnh kích thước văn bản */
+  color: #333; /* Màu sắc của văn bản */
+  margin-bottom: 10px; /* Khoảng cách với input */
+  padding: 5px;
+  border-radius: 5px; /* Bo tròn góc cho phần văn bản */
+  z-index: 10; /* Đảm bảo phần văn bản không bị che khuất */
+}
+/* Phần văn bản liên hệ */
+.contact {
+  font-size: 14px; /* Kích thước chữ */
+  color: #333; /* Màu chữ mặc định */
+}
+
+.contact a {
+  text-decoration: none; /* Bỏ gạch chân mặc định */
+  color: #42a1ff; /* Màu xanh cho các liên kết */
+  font-weight: 500; /* Làm đậm các liên kết */
+  padding: 0 5px; /* Khoảng cách giữa các liên kết */
+}
+
+.contact a:hover {
+  text-decoration: underline; /* Gạch chân khi hover */
+  color: #003366; /* Màu xanh đậm hơn khi hover */
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+}
+
+.input-container img {
+  width: 100%;
+  height: auto;
+}
+.contact-container img:nth-child(3) {
+  position: relative;
+  top: -2px;
+}
+
+.input-container input {
+  position: absolute;
+  right: -1px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #791214;
+  width: 100%;
+  height: 91%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Container to center all content */
+.container {
+  max-width: 1200px; /* Kích thước tối đa của container */
+  margin: 0 auto; /* Căn giữa container */
+  margin-top: 50px;
+  padding: 0 100px; /* Padding bên trái và phải */
+}
+.header-image{
+    cursor: pointer;
+}
+/* Header styles */
+header {
+  background-color: #004b87; /* Màu xanh của HCMUTE */
+  padding: 10px 0;
+  color: white;
+  text-align: center;
+}
+
+header .logo img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  color: #f4a261;
+}
+
+/* Carousel styles */
+.carousel {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.carousel-slide {
+  flex: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+}
+
+/* Footer styles */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
