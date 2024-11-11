@@ -58,7 +58,7 @@ body {
 }
 .contact-container img:nth-child(3) {
   position: relative;
-  top: -2px;
+  top: 0px;
 }
 
 .input-container input {
@@ -68,7 +68,7 @@ body {
   border-radius: 5px;
   border: 1px solid #791214;
   width: 100%;
-  height: 91%;
+  height: 96%;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
@@ -79,8 +79,8 @@ body {
   margin-top: 50px;
   padding: 0 100px; /* Padding bên trái và phải */
 }
-.header-image{
-    cursor: pointer;
+.header-image {
+  cursor: pointer;
 }
 /* Header styles */
 header {
@@ -132,11 +132,230 @@ header .logo img {
 
 /* Footer styles */
 footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
   width: 100%;
-  bottom: 0;
+  height: 200px; /* Chiều cao bạn có thể tuỳ chỉnh theo nhu cầu */
+  overflow: hidden;
+  position: relative;
+}
+
+footer img {
+  width: 120%;
+  height: 100%;
+  object-fit: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ footer */
+  object-position: center; /* Căn giữa hình ảnh */
+}
+
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+.chia-nua {
+  width: 100%;
+}
+.ribbon-wrapper {
+  position: relative;
+  z-index: 998;
+}
+.ribbon-front {
+  top: -35px;
+  background-color: #cc3333;
+  height: 50px;
+  width: 287px;
+  position: relative;
+  left: -10px;
+  z-index: 2;
+  font: 20px/50px bold Verdana, Geneva, sans-serif;
+  color: #f8f8f8;
+  text-align: center;
+  text-shadow: 0px 1px 2px #cc6666;
+}
+
+.ribbon-front,
+.ribbon-back-left,
+.ribbon-back-right {
+  -moz-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -khtml-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  -o-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright,
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright {
+  position: absolute;
+  z-index: 1;
+  border-style: solid;
+  height: 0px;
+  width: 0px;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright {
+}
+
+.ribbon-edge-bottomleft,
+.ribbon-edge-bottomright {
+  top: 16px;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-bottomleft {
+  left: -10px;
+  border-color: transparent #9b1724 transparent transparent;
+}
+
+.ribbon-edge-topleft {
+  top: -39px;
+  border-width: 5px 10px 0 0;
+}
+.ribbon-edge-bottomleft {
+  border-width: 0 10px 0px 0;
+}
+
+.ribbon-edge-topright,
+.ribbon-edge-bottomright {
+  left: 267px;
+  border-color: transparent transparent transparent #9b1724;
+}
+
+.ribbon-edge-topright {
+  top: 0px;
+  border-width: 0px 0 0 10px;
+}
+.ribbon-edge-bottomright {
+  border-width: 0 0 5px 10px;
+}
+
+@-webkit-keyframes flow {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+  50% {
+    left: 100px;
+    opacity: 0.3;
+  }
+  100% {
+    left: 180px;
+    opacity: 0;
+  }
+}
+@keyframes flow {
+  0% {
+    left: -20px;
+    opacity: 0;
+  }
+  50% {
+    left: 100px;
+    opacity: 0.3;
+  }
+  100% {
+    left: 180px;
+    opacity: 0;
+  }
+}
+
+.chia-doi {
+  display: flex;
 }

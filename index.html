@@ -11,6 +11,66 @@
       type="image/x-icon"
       href="assets/download-removebg-preview (1).png"
     />
+    <style>
+      /* CSS cho Running Text */
+      .running-text {
+        color: red;
+        font-size: 15px;
+        white-space: nowrap; /* Đảm bảo văn bản không bị xuống dòng */
+        overflow: hidden; /* Ẩn phần văn bản ra ngoài khung */
+        width: 100%; /* Chiều rộng của phần chạy */
+      }
+
+      .running-text span {
+        display: inline-block;
+        animation: run-text 10s linear infinite;
+      }
+
+      @keyframes run-text {
+        0% {
+          transform: translateX(300%); /* Bắt đầu từ bên phải */
+        }
+        100% {
+          transform: translateX(-100%); /* Kết thúc bên trái */
+        }
+      }
+
+      .slider-container {
+        width: 80%; /* Giới hạn chiều rộng tối đa của slider */
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        position: relative;
+        background-color: #f8f9fa;
+      }
+
+      .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+
+      .slider-item {
+        min-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #fff;
+        text-align: center;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      .slider-item img {
+        width: auto; /* Để hình ảnh tự động điều chỉnh theo kích thước */
+        max-width: 100%; /* Giới hạn chiều rộng hình ảnh tối đa để không bị tràn */
+        height: auto;
+        object-fit: contain; /* Đảm bảo ảnh luôn nằm trong khung mà không bị méo */
+        border-radius: 8px; /* Bo góc cho hình ảnh */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </head>
   <body>
     <div class="container">
@@ -26,10 +86,10 @@
         <img src="assets/download (1).png" alt="Image" />
       </div>
       <div class="header-image">
-        <img
-          style="width: 100%"
-          src="assets/Tagline web add QS Ranking-02.jpg"
-        />
+        <div>
+          <img style="width: 110%" src="assets/New folder/Banner KKT.png" />
+        </div>
+        <div></div>
       </div>
       <!-- Header -->
       <header>
@@ -42,37 +102,654 @@
           "
         >
           <ul style="list-style: none; display: flex; gap: 20px">
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Giới Thiệu</a></li>
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Công Khai</a></li>
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Đơn Vị</a></li>
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Tuyển Sinh</a></li>
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Đào Tạo</a></li>
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Nghiên Cứu</a></li>
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Đối Ngoại</a></li>
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Người Học</a></li>
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Cựu Sinh Viên</a></li>
-            <li><a href="#" style="font: 14px Arial, Helvetica, sans-serif">Nội Bộ</a></li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >Giới Thiệu</a
+              >
+            </li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >Đào Tạo</a
+              >
+            </li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >AUN-QA</a
+              >
+            </li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >Bộ Môn</a
+              >
+            </li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >Nghiên Cứu</a
+              >
+            </li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >Sinh Viên</a
+              >
+            </li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >Cộng Đồng</a
+              >
+            </li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >Quốc Tế</a
+              >
+            </li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >News</a
+              >
+            </li>
+            <li>
+              <a href="#" style="font: 14px Arial, Helvetica, sans-serif"
+                >Lập Trình 💻🙏</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
-
+      <div class="running-text">
+        <span>Cảm ơn các bạn đã xem qua website </span>
+      </div>
       <!-- Main Section with Carousel -->
-      <section class="carousel">
-        <div class="carousel-slide">
-          <img src="carousel-1.jpg" alt="Carousel Image 1" />
-        </div>
-        <div class="carousel-slide">
-          <img src="carousel-2.jpg" alt="Carousel Image 2" />
-        </div>
-        <div class="carousel-slide">
-          <img src="carousel-3.jpg" alt="Carousel Image 3" />
-        </div>
-      </section>
+      <div class="chia-nua">
+        <div>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 6</div>
+              <img src="assets/Nen phap luat.jpg" style="width: 100%" />
+              <div class="text">Nền pháp luật</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 6</div>
+              <img src="assets/Slide tot nghiep.jpg" style="width: 100%" />
+              <div class="text">Tốt nghiệp</div>
+            </div>
 
-      <!-- Footer -->
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 6</div>
+              <img src="assets/Slide web le cong bo.jpg" style="width: 100%" />
+              <div class="text">Lễ công bố</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">4 / 6</div>
+              <img src="assets/Tan PHT HCMUTE 20-25.jpg" style="width: 100%" />
+              <div class="text">Tân phó hiệu trưởng</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">5 / 6</div>
+              <img src="assets/Banner-Web_Tien si.jpg" style="width: 100%" />
+              <div class="text">Đánh loto lmao</div>
+            </div>
+            <div class="mySlides fade">
+              <div class="numbertext">6 / 6</div>
+              <img src="assets/Banner-Web_Thac si.jpg" style="width: 100%" />
+              <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+          <br />
+
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+          </div>
+        </div>
+      </div>
+      <div class="chia-doi">
+        <div class="left">
+          <img
+            style="width: 95%"
+            src="assets/New folder/132948a3974a3114685b.jpg"
+          />
+
+          <div style="display: flex">
+            <div
+              style="
+                width: 300px;
+                height: auto;
+                background-color: #ffffff;
+                border-radius: 15px;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                position: relative;
+                overflow: hidden;
+                margin-top: 30px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              "
+              onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 24px rgba(0, 0, 0, 0.15)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.1)'"
+            >
+              <!-- Ribbon -->
+              <div
+                style="
+                  position: absolute;
+                  top: 20px;
+                  left: -40px;
+                  background-color: #0f37ff;
+                  color: #fff;
+                  padding: 10px 60px;
+                  font-weight: bold;
+                  text-align: center;
+                  transform: rotate(-45deg);
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                "
+              >
+                Tuyển Dụng
+              </div>
+
+              <!-- Content Section -->
+              <div style="padding: 100px 20px 20px; text-align: center">
+                <p
+                  style="
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: #1976d2;
+                    margin-bottom: 15px;
+                  "
+                >
+                  <a
+                    href="asdasd"
+                    style="text-decoration: none; color: #1976d2"
+                  >
+                    Tuyển Dụng Nhân Viên Xuất Nhập Khẩu
+                  </a>
+                </p>
+
+                <img
+                  src="assets/New folder/GetArticleImage (2).jpg"
+                  alt="Article Image"
+                  style="width: 85%; border-radius: 10px; margin-bottom: 20px"
+                />
+
+                <div
+                  style="
+                    max-height: 160px;
+                    overflow-y: auto;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    text-align: justify;
+                    padding: 0 10px;
+                    color: #555;
+                    margin-bottom: 20px;
+                  "
+                >
+                  <br />🆘THÔNG BÁO TUYỂN NHÂN VIÊN ĐÀO TẠO LÊN LÀM QUẢN LÝ CHI
+                  NHÁNH NHÀ HÀNG KHÁCH SẠN TẠI NHẬT BẢN🆘<br />
+                  07/08/2024 CTCP Y khoa NQ Tuyển dụng 10/07/2024 CÔNG TY TNHH
+                  MTV TEX VIỆT NAM TUYỂN DỤNG CHUYÊN VIÊN XUẤT-NHẬP KHẨU
+                  05/10/2023 BIDV Đông Sài Gòn tuyển dụng 04/06/2023 MOORE
+                  AISC_TUYỂN DỤNG TRỢ LÝ KIỂM TOÁN VIÊN NĂM 2023 30/04/2023
+                  [HCM] Tổng Lãnh Sự Quán Hoa Kỳ Tuyển Dụng Thực Tập Sinh
+                  Part-time Phòng Thương Vụ Hoa Kỳ 2023 13/02/2023 SHASU GROUP
+                  TUYỂN DỤNG THỰC TẬP SINH 02/02/2023 VIB TPHCM tuyển dụng
+                  02/02/2023 CÔNG TY CỔ PHẦN AN TOÀN LAO ĐỘNG DẦU KHÍ NVC
+                  10/11/2022 FAST Tuyển dụng 03/11/2022 Công ty TNHH TMDV Dầu
+                  Khí Biển Đông 13/09/2022 CÔNG TY CỔ PHẦN KẾT CẤU THÉP ATAD
+                  TUYỂN DỤNG 13/09/2022 Công ty TNHH Thương mại Ngọc Kim Châu
+                  tuyển dụng 11/03/2021 TTI Tuyển dụng 30/01/2021 ECCO tuyển
+                  dụng 13/01/2021
+                </div>
+
+                <p style="color: #9e9e9e; font-size: 14px; margin-bottom: 20px">
+                  Ngày 15/8/2024
+                </p>
+
+                <button
+                  style="
+                    background-color: #1976d2;
+                    color: white;
+                    border: none;
+                    border-radius: 25px;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                  "
+                  onmouseover="this.style.backgroundColor='#0d47a1'"
+                  onmouseout="this.style.backgroundColor='#1976d2'"
+                >
+                  <a
+                    href="https://fe.hcmute.edu.vn/?TopicId=5d3a458d-22ac-4cc5-9d99-9150eb392c2b"
+                    style="color: white; text-decoration: none"
+                    >Xem Tất Cả</a
+                  >
+                </button>
+              </div>
+            </div>
+
+            <div
+              style="
+                width: 300px;
+                height: 400px;
+                margin-left: 30px;
+                background-color: #ffffff;
+                border-radius: 15px;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                position: relative;
+                overflow: hidden;
+                margin-top: 30px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+              "
+              onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 24px rgba(0, 0, 0, 0.15)'"
+              onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 16px rgba(0, 0, 0, 0.1)'"
+            >
+              <!-- Ribbon -->
+              <div
+                style="
+                  position: absolute;
+                  top: 20px;
+                  left: -40px;
+                  background-color: #ff2e85;
+                  color: #fff;
+                  padding: 10px 60px;
+                  font-weight: bold;
+                  text-align: center;
+                  transform: rotate(-45deg);
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                "
+              >
+                Doanh Nghiệp
+              </div>
+
+              <!-- Content Section -->
+              <div style="padding: 100px 20px 20px; text-align: center">
+                <p
+                  style="
+                    font-weight: bold;
+                    font-size: 18px;
+                    color: #1976d2;
+                    margin-bottom: 15px;
+                  "
+                >
+                  <a
+                    href="asdasd"
+                    style="text-decoration: none; color: #1976d2"
+                  >
+                    Kết Nối Với Doanh Nghiệp
+                  </a>
+                </p>
+
+                <img
+                  src="assets/New folder/GetArticleImage (3).jpg"
+                  alt="Article Image"
+                  style="width: 85%; border-radius: 10px; margin-bottom: 20px"
+                />
+
+                <div
+                  style="
+                    max-height: 160px;
+                    overflow-y: auto;
+                    font-size: 14px;
+                    line-height: 1.6;
+                    text-align: justify;
+                    padding: 0 10px;
+                    color: #555;
+                    margin-bottom: 20px;
+                  "
+                ></div>
+
+                <p style="color: #9e9e9e; font-size: 14px; margin-bottom: 20px">
+                  Ngày 17/4/2021
+                </p>
+
+                <button
+                  style="
+                    background-color: #1976d2;
+                    color: white;
+                    border: none;
+                    border-radius: 25px;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                  "
+                  onmouseover="this.style.backgroundColor='#0d47a1'"
+                  onmouseout="this.style.backgroundColor='#1976d2'"
+                >
+                  <a
+                    href="https://fe.hcmute.edu.vn/?TopicId=5d3a458d-22ac-4cc5-9d99-9150eb392c2b"
+                    style="color: white; text-decoration: none"
+                    >Xem Tất Cả</a
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="slider-container">
+            <div class="slider-wrapper" id="sliderWrapper">
+              <!-- Slide 1 -->
+              <div class="slider-item">
+                <img
+                  style="width: 100%"
+                  src="assets/New folder/1. POSTER GIỚI THIỆU da sua.jpg"
+                />
+              </div>
+              <!-- Slide 2 -->
+              <div class="slider-item">
+                <img src="assets/New folder/QLCN.png" />
+              </div>
+              <div class="slider-item">
+                <img src="assets/New folder/QLCN.png" />
+              </div>
+              <!-- Slide 3 -->
+              <div class="slider-item"></div>
+              <!-- Slide 4 -->
+              <div class="slider-item">
+                <img src="assets/New folder/KE TOAN.png" />
+              </div>
+              <!-- Slide 5 -->
+              <div class="slider-item">
+                <img src="assets/New folder/LOGS.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <div
+            style="
+              width: 270px;
+              height: 270px;
+              background: #fff;
+              border-radius: 10px;
+              border: 1px solid #e0e0e0;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              position: relative;
+              overflow: hidden;
+            "
+          >
+            <!-- Ribbon -->
+            <div
+              style="
+                position: absolute;
+                top: 20px;
+                left: -50px;
+                background-color: #ff5722;
+                color: white;
+                padding: 10px 60px;
+                font-weight: bold;
+                text-align: center;
+                transform: rotate(-45deg);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+              "
+            >
+              Logo
+            </div>
+
+            <!-- Content Section -->
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 80px;
+              "
+            >
+              <img
+                src="assets/GetArticleImage.jpg"
+                alt="Article Image"
+                style="width: 80%; border-radius: 10px; margin-bottom: 15px"
+              />
+              <p style="color: #757575; font-size: 14px; margin-bottom: 20px">
+                Ngày 05/09/2023
+              </p>
+              <button
+                style="
+                  background-color: #1976d2;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  padding: 10px 15px;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+                "
+                onmouseover="this.style.backgroundColor='#0d47a1'"
+                onmouseout="this.style.backgroundColor='#1976d2'"
+              >
+                <a
+                  href="https://fe.hcmute.edu.vn/?TopicId=5d3a458d-22ac-4cc5-9d99-9150eb392c2b"
+                  style="color: white; text-decoration: none"
+                  >Tất cả</a
+                >
+              </button>
+            </div>
+          </div>
+
+          <div
+            style="
+              width: 270px;
+              height: auto;
+              background: #fff;
+              border-radius: 10px;
+              border: 1px solid #e0e0e0;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+              position: relative;
+              overflow: hidden;
+              margin-top: 40px;
+              font-family: Arial, sans-serif;
+            "
+          >
+            <!-- Ribbon -->
+            <div
+              style="
+                position: absolute;
+                top: 20px;
+                left: -40px;
+                background-color: #bc190d;
+                color: white;
+                padding: 10px 60px;
+                font-weight: bold;
+                text-align: center;
+                transform: rotate(-45deg);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                z-index: 2;
+              "
+            >
+              Thông báo khoa
+            </div>
+
+            <!-- Content Section -->
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+              "
+            >
+              <img
+                src="assets/New folder/GetArticleImage (1).jpg"
+                alt="Article Image"
+                style="width: 80%; border-radius: 10px; margin-bottom: 15px"
+              />
+
+              <p
+                style="
+                  max-height: 160px;
+                  overflow-y: auto;
+                  font-size: 14px;
+                  line-height: 1.6;
+                  text-align: justify;
+                  padding-right: 10px;
+                  margin-bottom: 20px;
+                  color: #333;
+                "
+              >
+                <b>THÔNG BÁO:</b> VỀ VIỆC BẢO VỆ KLTN NGÀNH KẾ TOÁN NGÀY
+                21/05/2024 VÀ 23/05/2024. <br /><br />THÔNG BÁO RÚT HỌC PHẦN QUA
+                MẠNG HKII 23-24 19/03/2024. <br /><br />THÔNG BÁO TRỢ CẤP KHÓ
+                KHĂN CHO SV HKII 2023-2024. <br /><br />THÔNG BÁO ĐĂNG KÝ THI
+                KIỂM TRA TRÌNH ĐỘ TIẾNG ANH ĐẦU RA THÁNG 3/2024.
+                <br /><br />THÔNG BÁO MIỄN GIẢM HỌC PHÍ & HỌC BỔNG SINH VIÊN CÓ
+                ANH, CHỊ, EM RUỘT ĐANG HỌC HOẶC ĐÃ TỐT NGHIỆP TỪ TRƯỜNG ĐẠI HỌC
+                SƯ PHẠM KỸ THUẬT TP.HCM HỌC KÌ II NĂM HỌC 2023-2024.
+              </p>
+
+              <p style="color: #757575; font-size: 14px; margin-bottom: 20px">
+                Ngày 05/09/2023
+              </p>
+
+              <button
+                style="
+                  background-color: #1976d2;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  padding: 10px 15px;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+                "
+                onmouseover="this.style.backgroundColor='#0d47a1'"
+                onmouseout="this.style.backgroundColor='#1976d2'"
+              >
+                <a
+                  href="https://fe.hcmute.edu.vn/?TopicId=5d3a458d-22ac-4cc5-9d99-9150eb392c2b"
+                  style="color: white; text-decoration: none"
+                  >Xem tất cả</a
+                >
+              </button>
+            </div>
+
+            <img
+              alt=""
+              src="assets/New folder/Hnet-image.gif"
+              style="width: 300px; height: 300px"
+            />
+          </div>
+          <iframe
+            style="margin-top: 20px"
+            width="310"
+            height="174"
+            src="https://www.youtube.com/embed/b2Q78Sr4Xpg"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          ></iframe>
+        </div>
+      </div>
+
       <footer>
-        <p>&copy; 2024 HCMUTE. Tất cả quyền được bảo lưu.</p>
+        <img src="assets/New folder/Screenshot 2024-11-11 153554.png" />
       </footer>
+
+      <div>
+        <span style="font-size: 18px"> </span>
+        <table
+          style="
+            border: 1px solid #a5a5a5;
+            width: 837px;
+            height: 85px;
+            top: 196px;
+          "
+          cellpadding="0"
+          align="left"
+        >
+          <tbody>
+            <tr>
+              <td>
+                <p style="text-align: center">
+                  <span style="font-size: large; font-family: Tahoma"
+                    >Copyright @ 2022, Trường Đại học Sư phạm Kỹ thuật, Thành
+                    phố Hồ Chí Minh</span
+                  >
+                </p>
+                <p style="text-align: center">
+                  <span style="font-size: large; font-family: Tahoma"
+                    >&nbsp;</span
+                  >
+                </p>
+                <p>
+                  <span style="font-family: Tahoma">
+                    <strong style="font-size: large"
+                      >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Liên hệ:</strong
+                    ><span style="font-size: large">&nbsp;</span
+                    ><strong style="font-size: large"
+                      ><span style="color: #c00000"
+                        >Văn phòng khoa Kinh tế</span
+                      ></strong
+                    ><br style="font-size: large" />
+                    <span style="font-size: large"
+                      >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;A1-306&nbsp; - Tòa nhà
+                      Trung tâm, Trường Đại học Sư phạm Kỹ thuật TP.HCM</span
+                    ><br style="font-size: large" />
+                    <strong style="font-size: large"
+                      >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Điện thoại:</strong
+                    ><span style="font-size: large"
+                      >&nbsp;(+028) 3896 8641 - (+028) 3896 1333, ext: 8390,
+                      8392</span
+                    ><br style="font-size: large" />
+                    <strong style="font-size: large"
+                      >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Email:</strong
+                    ><span style="font-size: large"
+                      >&nbsp;kkt@hcmute.edu.vn</span
+                    >&nbsp; &nbsp;</span
+                  >
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </body>
+
+  <script>
+    const sliderWrapper = document.getElementById("sliderWrapper");
+    let currentIndex = 0;
+    const slideCount = sliderWrapper.children.length;
+    const slideWidth = sliderWrapper.children[0].offsetWidth;
+
+    // Tự động lướt slider
+    let autoSlide = setInterval(() => {
+      moveToNextSlide();
+    }, 1500);
+
+    // Chuyển đến slide tiếp theo
+    function moveToNextSlide() {
+      currentIndex++;
+      if (currentIndex >= slideCount) {
+        currentIndex = 0;
+      }
+      sliderWrapper.style.transform = `translateX(-${
+        currentIndex * slideWidth
+      }px)`;
+    }
+
+    // Dừng slider khi hover
+    sliderWrapper.addEventListener("mouseover", () => {
+      clearInterval(autoSlide);
+    });
+
+    // Tiếp tục slider khi không hover
+    sliderWrapper.addEventListener("mouseout", () => {
+      autoSlide = setInterval(() => {
+        moveToNextSlide();
+      }, 1500);
+    });
+  </script>
 </html>
